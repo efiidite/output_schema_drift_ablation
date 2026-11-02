@@ -1,4 +1,4 @@
-# schema_ablation_matrix_0b96a452
+# output_schema_drift_ablation
 
 （输出结构漂移场景）输出结构漂移与下游任务表现的分数能否预测下游表现？用结构与协议校验量化预测力，并列出反例。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python schema_ablation_matrix_0b96a452.py --help
-python schema_ablation_matrix_0b96a452.py --input sample.txt
-python schema_ablation_matrix_0b96a452.py --input sample.txt --json
+python output_schema_drift_ablation.py --help
+python output_schema_drift_ablation.py --input sample.txt
+python output_schema_drift_ablation.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「消融矩阵」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python schema_ablation_matrix_0b96a452.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python schema_ablation_matrix_0b96a452.py --input sample.txt --json`；
+2. 运行 `python output_schema_drift_ablation.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
